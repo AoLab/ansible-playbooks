@@ -9,3 +9,5 @@ This repository contains the general information about this organization IT depa
 - Managed on: [ClouDNS](https://asia.cloudns.net)
 
 ## platform.i1820.org
+- IP: 185.4.29.226
+- Registered with: [Iranserver](https://iranserver.com)
