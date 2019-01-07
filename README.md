@@ -3,6 +3,9 @@
 I1820 is an open-source organization so its configuration is open too.
 This repository contains the general information about this organization IT department.
 
+To support `https` we use [Certbot](https://certbot.eff.org/docs/using.html#manual) with Nginx and Ubuntu 18.04.
+Please note that we use dns plugin of certbot. I1820 monitoring is based on [uptime robot](https://uptimerobot.com).
+
 ## DNS
 - Domain: i1820.org
 - Registered with: [Iranserver](https://iranserver.com)
