@@ -1,4 +1,4 @@
-# config
+# config :wrench:
 ## Introduction
 I1820 is an open-source organization so its configuration is open too.
 This repository contains the general information about this organization IT department.
