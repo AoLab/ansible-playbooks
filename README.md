@@ -15,3 +15,6 @@ Please note that we use dns plugin of certbot. I1820 monitoring is based on [upt
 - IP: 185.4.29.226
 - Registered with: [Iranserver](https://iranserver.com)
 - SSH: 22
+### portainer.platform.i1820.org
+- User: parham
+- Pass: :see_no_evil:
