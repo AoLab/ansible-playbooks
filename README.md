@@ -4,7 +4,13 @@ I1820 is an open-source organization so its configuration is open too.
 This repository contains the general information about this organization IT department.
 
 To support `https` we use [Certbot](https://certbot.eff.org/docs/using.html#manual) with Nginx and Ubuntu 18.04.
-Please note that we use dns plugin of certbot. I1820 monitoring is based on [uptime robot](https://uptimerobot.com).
+Please note that we use dns challenge with the following command:
+
+```sh
+sudo certbot certonly --manual -d '*.platform.i1820.org' -d 'platform.i1820.org' --preferred-challenges dns
+```
+
+I1820 monitoring is based on [uptime robot](https://uptimerobot.com).
 
 ## DNS
 - Domain: i1820.org
