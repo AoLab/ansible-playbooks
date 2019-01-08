@@ -88,12 +88,25 @@ server {
 server {
 	listen 443 ssl;
 
-        ssl_certificate /etc/letsencrypt/live/platform.avidnet.io/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/platform.avidnet.io/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/platform.i1820.org/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/platform.i1820.org/privkey.pem;
 
 	server_name platform.i1820.org;
         location / {
                 proxy_redirect http:// https://;
                 proxy_pass http://127.0.0.1:1820;
+        }
+}
+
+server {
+	listen 443 ssl;
+
+        ssl_certificate /etc/letsencrypt/live/platform.i1820.org/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/platform.i1820.org/privkey.pem;
+
+	server_name portainer.platform.i1820.org;
+        location / {
+                proxy_redirect http:// https://;
+                proxy_pass http://127.0.0.1:9000;
         }
 }
