@@ -81,7 +81,7 @@ server {
 # + Portainer
 # + Rate Limiter
 
-limit_req_zone $binary_remote_addr zone=i1820limit:10m rate=10r/s;
+limit_req_zone $binary_remote_addr zone=i1820limit:10m rate=100r/s;
 
 server {
     listen 80;
@@ -91,6 +91,8 @@ server {
     return 301 https://$host$request_uri;
 }
 server {
+        limit_req zone=i1820limit burst=100;
+
 	listen 443 ssl;
 
         ssl_certificate /etc/letsencrypt/live/platform.i1820.org/fullchain.pem;
@@ -98,7 +100,6 @@ server {
 
 	server_name platform.i1820.org;
         location / {
-                limit_req zone=i1820limit;
                 proxy_redirect http:// https://;
                 proxy_pass http://127.0.0.1:1820;
         }
