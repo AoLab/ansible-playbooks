@@ -81,6 +81,7 @@ server {
 # + Portainer
 # + Rate Limiter
 
+# https://www.nginx.com/blog/rate-limiting-nginx/
 limit_req_zone $binary_remote_addr zone=i1820limit:10m rate=100r/s;
 
 server {
