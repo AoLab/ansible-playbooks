@@ -12,7 +12,7 @@ AIoTRC datacenter is located in Amirkabir CEIT datacenter. Following table descr
 
 The following URLs are assigned to AIoTRC:
 
-- platform.ceit.aut.ac.ir --> 172.23.132.37
+- [platform, *.platform].ceit.aut.ac.ir --> 172.23.132.37
 - backback.ceit.aut.ac.ir
 
 Platform DNS is available on `platform-networking` and its configuration is available in `bind9`.
