@@ -16,3 +16,4 @@ The following URLs are assigned to AIoTRC:
 - backback.ceit.aut.ac.ir
 
 Platform DNS is available on `platform-networking` and its configuration is available in `bind9`.
+In order to use specific dns with dhcp on Ubuntu 18.04 check [this](https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve) stackoverflow question.
