@@ -2,13 +2,13 @@
 ## Introduction
 AIoTRC datacenter is located in Amirkabir CEIT datacenter. Following table describe the configuration of it.
 
-| Name | IP | Users | Remote access (through SSH) | vCPUs | RAM |
-|:----:|:--:|:----- | :------------ | :----: | :---: |
-| platform-base | 172.23.132.37 | parham | 50006 | 6 | 16GB |
-| platform-networking | 172.23.132.51 | parham | - | 4 | 8GB |
-| platform-kube | 172.23.132.52 | parham | - | 8 | 24GB |
-| platform-dev-1 | 172.23.132.50 | parham | - | 8 | 8GB |
-| platform-dev-2 | 172.23.132.41 | parham | - | 8 | 8GB |
+| Host | IP | Users | Remote SSH Access | vCPUs | RAM | Name |
+|:----:|:--:|:----- | :------------ | :----: | :---: | :---: |
+| platform-base | 172.23.132.37 | parham | 50006 | 6 | 16GB | base.platform.site |
+| platform-networking | 172.23.132.51 | parham | - | 4 | 8GB | ns.platform.site |
+| platform-kube | 172.23.132.52 | parham | - | 8 | 24GB | kube.platform.site |
+| platform-dev-1 | 172.23.132.50 | parham | - | 8 | 8GB | dev1.platform.site |
+| platform-dev-2 | 172.23.132.41 | parham | - | 8 | 8GB | dev2.platform.site |
 
 The following URLs are assigned to AIoTRC:
 
