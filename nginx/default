@@ -89,6 +89,17 @@ server {
 server {
 	listen 80;
 
+	server_name dev1.platform.ceit.aut.ac.ir;
+
+	location / {
+		proxy_pass http://dev1.platform.site;
+	}
+
+}
+
+server {
+	listen 80;
+
 	server_name lsserver.platform.ceit.aut.ac.ir;
 
 	location / {
