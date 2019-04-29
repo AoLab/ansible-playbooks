@@ -89,7 +89,7 @@ server {
 server {
 	listen 80;
 
-	server_name dev1.platform.ceit.aut.ac.ir;
+	server_name api.dev1.platform.ceit.aut.ac.ir;
 
 	location / {
 		proxy_pass http://dev1.platform.site;
