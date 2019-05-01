@@ -107,7 +107,7 @@ server {
 	server_name dev1.platform.ceit.aut.ac.ir;
 
 	location / {
-		proxy_pass http://dev1.platform.site:8080;
+		proxy_pass http://dev1.platform.site:1323;
 	}
 }
 
