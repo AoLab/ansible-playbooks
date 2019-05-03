@@ -33,3 +33,10 @@ I1820 monitoring is based on [uptime robot](https://uptimerobot.com).
 - Domain: i1820.org
 - Registered with: [Iranserver](https://iranserver.com)
 - Managed on: [ClouDNS](https://asia.cloudns.net)
+
+## Aolab Domain
+
+## DNS
+- Domain: aolab.org
+- Registered with: [Iranserver](https://iranserver.com)
+- Managed on: [ClouDNS](https://asia.cloudns.net)
