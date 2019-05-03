@@ -1,4 +1,4 @@
-# DC
+# DC :wrench:
 ## Introduction
 Aolab datacenter is located in Amirkabir CEIT datacenter. Following table describe the configuration of it.
 
@@ -17,3 +17,19 @@ The following URLs are assigned to Aolab:
 
 Platform DNS is available on `platform-networking` and its configuration is available in `bind9`.
 In order to use specific dns with dhcp on Ubuntu 18.04 check [this](https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve) stackoverflow question.
+
+## I1820 Domain
+
+To support `https` we use [Certbot](https://certbot.eff.org/docs/using.html#manual) with Nginx and Ubuntu 18.04.
+Please note that we use dns challenge with the following command:
+
+```sh
+sudo certbot certonly --manual -d '*.platform.i1820.org' -d 'platform.i1820.org' --preferred-challenges dns
+```
+
+I1820 monitoring is based on [uptime robot](https://uptimerobot.com).
+
+## DNS
+- Domain: i1820.org
+- Registered with: [Iranserver](https://iranserver.com)
+- Managed on: [ClouDNS](https://asia.cloudns.net)
