@@ -1,6 +1,6 @@
 # DC
 ## Introduction
-AIoTRC datacenter is located in Amirkabir CEIT datacenter. Following table describe the configuration of it.
+Aolab datacenter is located in Amirkabir CEIT datacenter. Following table describe the configuration of it.
 
 | Host | IP | Users | Remote SSH Access | vCPUs | RAM | Name |
 |:----:|:--:|:----- | :------------ | :----: | :---: | :---: |
@@ -10,7 +10,7 @@ AIoTRC datacenter is located in Amirkabir CEIT datacenter. Following table descr
 | platform-dev-1 | 172.23.132.50 | parham, sepehr | - | 8 | 8GB | dev1.platform.site |
 | platform-dev-2 | 172.23.132.41 | parham | - | 8 | 8GB | dev2.platform.site |
 
-The following URLs are assigned to AIoTRC:
+The following URLs are assigned to Aolab:
 
 - [platform, *.platform].ceit.aut.ac.ir --> 172.23.132.37
 - backback.ceit.aut.ac.ir
