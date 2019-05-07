@@ -22,6 +22,8 @@ And the following port mapping is avaiable for `platform.ceit.aut.ac.ir`:
 Platform DNS is available on `platform-networking` and its configuration is available in `bind9`.
 In order to use specific dns with dhcp on Ubuntu 18.04 check [this](https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve) stackoverflow question.
 
+In the `platform-base` there is a simple but useful openvpn service that operates on port 8000.
+
 ## I1820 Domain
 
 To support `https` we use [Certbot](https://certbot.eff.org/docs/using.html#manual) with Nginx and Ubuntu 18.04.
