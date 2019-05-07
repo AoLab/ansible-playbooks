@@ -10,3 +10,15 @@ zone "platform.site" {
     type master;
     file "/etc/bind/zones/db.platform.site";
 };
+
+zone "ceit.local" IN {
+    type forward;
+    forwarders {
+        172.23.128.26;
+        172.23.128.23;
+        172.23.128.22;
+        172.23.128.21;
+        172.23.128.6;
+        172.23.128.0;
+    };
+};
