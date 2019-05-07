@@ -15,6 +15,10 @@ The following URLs are assigned to Aolab:
 - [platform, *.platform].ceit.aut.ac.ir --> 172.23.132.37
 - backback.ceit.aut.ac.ir
 
+And the following port mapping is avaiable for `platform.ceit.aut.ac.ir`:
+
+- 50008 -> 8000
+
 Platform DNS is available on `platform-networking` and its configuration is available in `bind9`.
 In order to use specific dns with dhcp on Ubuntu 18.04 check [this](https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve) stackoverflow question.
 
