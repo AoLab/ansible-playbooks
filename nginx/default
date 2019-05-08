@@ -114,6 +114,16 @@ server {
 server {
 	listen 80;
 
+	server_name kube.platform.ceit.aut.ac.ir;
+
+	location / {
+		proxy_pass https://kube.platform.site:30000;
+	}
+}
+
+server {
+	listen 80;
+
 	server_name lsserver.platform.ceit.aut.ac.ir;
 
 	location / {
