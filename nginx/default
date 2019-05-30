@@ -177,6 +177,16 @@ server {
 	}
 }
 
+server {
+	listen 80;
+
+	server_name grafana.dev2.platform.ceit.aut.ac.ir grafana.demo.platform.ceit.aut.ac.ir;
+
+	location / {
+		proxy_pass http://172.23.132.41:3000;
+	}
+}
+
 
 server {
 	listen 80;
