@@ -139,10 +139,11 @@ server {
 	server_name lsserver.platform.ceit.aut.ac.ir;
 
         location ~ ^/api/(gateways|devices)/(\w+)/(frames|events)$ {
-		proxy_pass http://127.0.0.1:8080/api/$1/$2/$3;
+		proxy_pass https://127.0.0.1:8080/api/$1/$2/$3;
 		proxy_http_version 1.1;
 		proxy_set_header Upgrade $http_upgrade;
-		proxy_set_header Connection "Upgrade";
+		proxy_set_header Connection "upgrade";
+                proxy_set_header Sec-WebSocket-Protocol $http_sec_websocket_protocol
 		proxy_read_timeout 86400s;
 		proxy_send_timeout 86400s;
 	}
