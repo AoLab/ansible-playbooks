@@ -98,7 +98,6 @@ server {
         	# add_header Access-Control-Allow-Headers 'Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With' always;
 		proxy_pass http://dev1.platform.site:1994;
 	}
-
 }
 
 server {
@@ -136,6 +135,33 @@ server {
 server {
 	listen 80;
 
+	server_name api.dev2.platform.ceit.aut.ac.ir api.demo.platform.ceit.aut.ac.ir;
+
+	location / {
+		# add_header Access-Control-Allow-Origin '*' always;
+		# add_header Access-Control-Allow-Credentials 'true' always;
+        	# add_header Access-Control-Allow-Methods 'GET, POST, PUT, DELETE, OPTIONS' always;
+        	# add_header Access-Control-Allow-Headers 'Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With' always;
+		proxy_pass http://172.23.132.41:7070;
+	}
+
+}
+
+server {
+	listen 80;
+
+	server_name dev2.platform.ceit.aut.ac.ir demo.platform.ceit.aut.ac.ir;
+
+	location / {
+		proxy_pass http://172.23.132.41:7080;
+	}
+
+}
+
+
+server {
+	listen 80;
+
 	server_name lsserver.platform.ceit.aut.ac.ir;
 
         location ~ ^/api/(gateways|devices)/(\w+)/(frames|events)$ {
@@ -143,7 +169,6 @@ server {
 		proxy_http_version 1.1;
 		proxy_set_header Upgrade $http_upgrade;
 		proxy_set_header Connection "upgrade";
-                proxy_set_header Sec-WebSocket-Protocol $http_sec_websocket_protocol
 		proxy_read_timeout 86400s;
 		proxy_send_timeout 86400s;
 	}
