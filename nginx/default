@@ -155,7 +155,26 @@ server {
 	location / {
 		proxy_pass http://172.23.132.41:7080;
 	}
+}
 
+server {
+	listen 80;
+
+	server_name lsserver.dev2.platform.ceit.aut.ac.ir lsserver.demo.platform.ceit.aut.ac.ir;
+
+	location / {
+		proxy_pass https://172.23.132.41:8081;
+	}
+}
+
+server {
+	listen 80;
+
+	server_name portainer.dev2.platform.ceit.aut.ac.ir portainer.demo.platform.ceit.aut.ac.ir;
+
+	location / {
+		proxy_pass http://172.23.132.41:9000;
+	}
 }
 
 
