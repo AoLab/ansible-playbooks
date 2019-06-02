@@ -22,7 +22,15 @@ And the following port mapping is avaiable for `platform.ceit.aut.ac.ir`:
 Platform DNS is available on `platform-networking` and its configuration is available in `bind9`.
 In order to use specific dns with dhcp on Ubuntu 18.04 check [this](https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve) stackoverflow question.
 
+## OpenVPN
+
 In the `platform-base` there is a simple but useful openvpn service that operates on port 8000.
+For better usage please use the following command in `ovpn` file:
+
+```
+# redirect-gateway def1
+route 172.23.0.0 255.255.0.0
+```
 
 ## I1820 Domain
 
