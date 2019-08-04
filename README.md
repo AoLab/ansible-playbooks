@@ -34,10 +34,11 @@ route 172.23.0.0 255.255.0.0
 
 ## I1820 Domain
 
-To support `https` we use [Certbot](https://certbot.eff.org/docs/using.html#manual) with Nginx and Ubuntu 18.04.
+To support `https` we use [Certbot](https://certbot.eff.org) on Ubuntu 18.04.
 Please note that we use dns challenge with the following command:
 
 ```sh
+brew install letsencrypt
 sudo certbot certonly --manual -d '*.platform.i1820.org' -d 'platform.i1820.org' --preferred-challenges dns
 ```
 
@@ -46,7 +47,7 @@ I1820 monitoring is based on [uptime robot](https://uptimerobot.com).
 ## DNS
 - Domain: i1820.org
 - Registered with: [Iranserver](https://iranserver.com)
-- Managed on: [ClouDNS](https://asia.cloudns.net)
+- Managed on: [ArvanCloud](https://npanel.arvancloud.com)
 
 ## Aolab Domain
 
