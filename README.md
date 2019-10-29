@@ -32,6 +32,9 @@ For better usage please use the following command in `ovpn` file:
 route 172.23.0.0 255.255.0.0
 ```
 
+OpenVPN configuration is available under `openvpn` folder for user `parham`. This configuration
+needs a key (hint: _somewhere is the best_).
+
 ## I1820 Domain
 
 To support `https` we use [Certbot](https://certbot.eff.org) on Ubuntu 18.04.
