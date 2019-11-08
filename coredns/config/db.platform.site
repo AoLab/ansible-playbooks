@@ -1,0 +1,17 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ns1.parham.home. admin.parham.home. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+	IN	NS	ns.platform.site.
+ns	IN	A	172.23.132.51
+base	IN	A	172.23.132.37
+kube	IN	A	172.23.132.52
+dev1	IN	A	172.23.132.50
+dev2	IN	A	172.23.132.41
