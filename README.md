@@ -19,12 +19,12 @@ And the following port mapping is avaiable for `platform.ceit.aut.ac.ir`:
 
 - 50008 -> 8000
 
-Platform DNS is available on `platform-networking` and its configuration is available in `bind9`.
-In order to use specific dns with dhcp on Ubuntu 18.04 check [this](https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve) stackoverflow question or use [this](https://medium.com/@niktrix/getting-rid-of-systemd-resolved-consuming-port-53-605f0234f32f) medium post to handle it forever.
+Platform DNS is available on `platform-networking` and its configuration is available in `coredns`.
+In order to use specific dns with dhcp on Ubuntu 18.04, check [this](https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve) stackoverflow question or use [this](https://medium.com/@niktrix/getting-rid-of-systemd-resolved-consuming-port-53-605f0234f32f) medium post to handle it forever.
 
 ## OpenVPN
 
-In the `platform-base` there is a simple but useful openvpn service that operates on port 8000.
+In the `platform-base` there is a useful openvpn service with simple configuration that operates on port 8000.
 For better usage please use the following command in `ovpn` file:
 
 ```
@@ -32,6 +32,7 @@ For better usage please use the following command in `ovpn` file:
 route 172.23.0.0 255.255.0.0
 ```
 
+By this command, only your CEIT traffic will redirect over OpenVPN.
 OpenVPN configuration is available under `openvpn` folder for user `parham`. This configuration
 needs a key (hint: _somewhere is the best_).
 
@@ -57,4 +58,4 @@ I1820 monitoring is based on [uptime robot](https://uptimerobot.com).
 ## DNS
 - Domain: aolab.org
 - Registered with: [Iranserver](https://iranserver.com)
-- Managed on: [ClouDNS](https://asia.cloudns.net)
+- Managed on: [ArvanCloud](https://npanel.arvancloud.com)
