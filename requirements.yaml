@@ -1,0 +1,5 @@
+---
+- src: https://github.com/1995parham-me/ansible-role.git
+  scm: git
+  version: main
+  name: 1995parham-me
