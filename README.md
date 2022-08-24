@@ -1,4 +1,4 @@
-# Ansible Playbooks :wrench:
+# Ansible Playbooks :wrench
 
 ## Introduction
 
@@ -7,10 +7,10 @@ Following table describe the configuration of these servers.
 
 | Host | IP | Users | vCPUs | RAM | Name |
 |:----:|:--:|:----- | :------------ | :----: | :---: |
-| mia | 172.23.132.221 | parham, mia | 4 | 4Gi | mia.aolab.infra |
-
+| mia | 172.23.132.221 | parham, mia | 4 | 4Gi | mia.ceit.aut.infra |
 
 ## DNS
+
 - Domain: i1820.org
 - Registered with: [Iranserver](https://iranserver.com)
 - Managed on: [ArvanCloud](https://npanel.arvancloud.com)
@@ -18,6 +18,7 @@ Following table describe the configuration of these servers.
 ## Aolab Domain
 
 ## DNS
+
 - Domain: aolab.org
 - Registered with: [Iranserver](https://iranserver.com)
 - Managed on: [ArvanCloud](https://npanel.arvancloud.com)
