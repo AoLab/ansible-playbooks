@@ -4,8 +4,12 @@ services:
     image: "ghcr.io/i1820/mia:latest"
     restart: always
     environment:
+      - MIA_TENANT=main
       - MIA_MQTT__HOST=emqx
+      - MIA_MQTT__PORT=1883
       - MIA_DATABASE__CONFIG__HOST=mongodb://mongodb
+      - MIA_DATABASE__CONFIG__PORT=27017
+      - MIA_DATABASE__CONFIG__DATABASE=mia
     ports:
       - "8080:8080"
 
