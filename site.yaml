@@ -48,7 +48,7 @@
     - name: copy the nginx config file and restart nginx
       ansible.builtin.copy:
         src: mia/mia.cfg
-        dest: /etc/nginx/sites-available/internet.cfg
+        dest: /etc/nginx/sites-available/mia.cfg
       become: yes
     - name: create symlink of nginx configuration
       ansible.builtin.file:
