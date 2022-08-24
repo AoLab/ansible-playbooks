@@ -12,6 +12,14 @@
     - role: 1995parham-me
       tags: ['1995parham_me', 'parham']
 
+- hosts: all
+  tasks:
+    - name: install required packages
+      become: true
+      ansible.builtin.apt:
+        name:
+          - btop
+
 - hosts: mia
   tasks:
     - name: create required directories
