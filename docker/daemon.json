@@ -1,5 +1,8 @@
 {
   "insecure-registries": [
-    "172.25.154.163:5000"
+    "https://docker.arvancloud.com"
+  ],
+  "registry-mirrors": [
+    "https://docker.arvancloud.com"
   ]
 }
