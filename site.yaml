@@ -59,22 +59,24 @@
         src: mia/mia.cfg
         dest: /etc/nginx/sites-available/mia.cfg
       become: yes
+      notify:
+        - restart nginx
     - name: create symlink of nginx configuration
       ansible.builtin.file:
         src: /etc/nginx/sites-available/mia.cfg
         dest: /etc/nginx/sites-enabled/default
         state: link
       become: yes
-    - name: restart nginx
-      ansible.builtin.service:
-        name: nginx
-        state: restarted
-        enabled: yes
-      become: yes
   handlers:
     - name: restart docker
       become: yes
       ansible.builtin.service:
         name: docker
+        state: restarted
+        enabled: yes
+    - name: restart nginx
+      become: yes
+      ansible.builtin.service:
+        name: nginx
         state: restarted
         enabled: yes
