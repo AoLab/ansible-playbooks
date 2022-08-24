@@ -1,6 +1,6 @@
 ---
 services:
-  internet:
+  mia:
     image: "ghcr.io/i1820/mia:latest"
     restart: always
     environment:
