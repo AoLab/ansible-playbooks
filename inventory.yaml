@@ -1,0 +1,7 @@
+---
+all:
+  children:
+    mia:
+      hosts:
+        mia.ceit.aut.infra:
+          ansible_host: 172.23.132.221
