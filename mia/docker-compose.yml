@@ -1,0 +1,19 @@
+---
+services:
+  internet:
+    image: "ghcr.io/i1820/mia:latest"
+    restart: always
+    environments:
+      MIA_MQTT__HOST: emqx
+      MIA_DATABASE__CONFIG__HOST: mongodb://mongodb
+    ports:
+      - "8080:8080"
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - 27017:27017
+  emqx:
+    image: emqx/emqx:5.0.0
+    ports:
+      - 1883:1883
+      - 18083:18083
