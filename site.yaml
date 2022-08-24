@@ -13,18 +13,33 @@
       tags: ['1995parham_me', 'parham']
 
 - hosts: mia
+  handlers:
+    name: restart docker
+    become: yes
+    ansible.builtin.service:
+      name: docker
+      state: restarted
+      enabled: yes
   tasks:
     - name: create required directories
       ansible.builtin.file:
         state: directory
         path: $HOME/i1820/mia
       become: no
+
     - name: install docker
       become: true
       ansible.builtin.apt:
         name:
           - docker.io
           - docker-compose
+    - name: copy the daemon.json
+      ansible.builtin.copy:
+        src: docker/daemon.json
+        dest: /etc/docker/daemon.json
+      become: yes
+      notify:
+        - restart docker
     - name: add user to docker group
       become: true
       user:
@@ -39,6 +54,7 @@
         src: mia/docker-compose.yml
         dest: $HOME/i1820/mia/docker-compose.yml
       become: no
+
     - name: ensure nginx is at the latest version
       ansible.builtin.apt:
         name:
