@@ -1,0 +1,64 @@
+---
+- name: change hostname
+  hosts: all
+  become: true
+  tasks:
+    - hostname:
+        name: "{{ inventory_hostname }}"
+      when: ansible_hostname != inventory_hostname
+
+- hosts: all
+  roles:
+    - role: 1995parham-me
+      tags: ['1995parham_me', 'parham']
+
+- hosts: mia
+  tasks:
+    - name: create required directories
+      ansible.builtin.file:
+        state: directory
+        path: $HOME/i1820/mia
+      become: no
+    - name: install docker
+      become: true
+      ansible.builtin.apt:
+        name:
+          - docker.io
+          - docker-compose
+    - name: add user to docker group
+      become: true
+      user:
+        # name: "{{ ansible_user_id }}"
+        # TODO: change it
+        name: parham
+        append: true
+        groups:
+          - docker
+    - name: copy mia docker-compose
+      ansible.builtin.copy:
+        src: mia/docker-compose.yml
+        dest: $HOME/i1820/mia/docker-compose.yml
+      become: no
+    - name: ensure nginx is at the latest version
+      ansible.builtin.apt:
+        name:
+          - nginx
+        state: latest
+      become: yes
+    - name: copy the nginx config file and restart nginx
+      ansible.builtin.copy:
+        src: mia/mia.cfg
+        dest: /etc/nginx/sites-available/internet.cfg
+      become: yes
+    - name: create symlink of nginx configuration
+      ansible.builtin.file:
+        src: /etc/nginx/sites-available/mia.cfg
+        dest: /etc/nginx/sites-enabled/default
+        state: link
+      become: yes
+    - name: restart nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
+        enabled: yes
+      become: yes
