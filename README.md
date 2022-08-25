@@ -1,4 +1,4 @@
-# Ansible Playbooks :wrench
+# Ansible Playbooks 🔧
 
 ## Introduction
 
